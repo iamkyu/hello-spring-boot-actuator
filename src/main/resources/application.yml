@@ -10,6 +10,17 @@ spring:
     username: sa
 
 
+
+management:
+  endpoint:
+    health:
+      show-details: always # 해당 옵션을 활성화하면 좀 더 자세한 정보 확인 가능 (레디스 버전, db종류, 디스크 용량)
+      show-components: always # 해당 옵션을 활성화하면 각 컴포넌트 (db, diskSpace, redis..) 의 개별 상태도 확인 가능
+#      group:
+#        custom:
+#          exclude: redis # 해당 옵션을 활성화하면 /actuator/health/custom 엔드포인트가 노출되고 명시한 프로퍼티를 헬스체크에서 제
+
+
 ---
 spring:
   config:

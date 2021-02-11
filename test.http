@@ -1,2 +1,12 @@
-###
+### hello
 GET localhost:8080/hello
+
+### info
+GET localhost:8080/actuator/info
+
+### healch check
+GET localhost:8080/actuator/health
+
+### healch check custom
+GET localhost:8080/actuator/health/custom
+StatusAggregator.java
