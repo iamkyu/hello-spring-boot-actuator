@@ -6,6 +6,7 @@
 ## 엔드 포인트
 - [Spring Boot 1.X](https://docs.spring.io/spring-boot/docs/1.5.x/reference/html/production-ready-endpoints.html) 에서는 기본으로 노출 되어 있는 엔드포인트가 꽤 많음
 - [Spring Boot 2.X](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-endpoints-exposing-endpoints) 부터는 두 개의 엔드포인트만 기본 노출되도록 변경 (`/actuator/info`, `/actuator/health`)
+- `org.springframework.boot.actuate.autoconfigure.endpoint.expose.IncludeExcludeEndpointFilter.DefaultIncludes.WEB`
 
 ### 1. 포트변경
 > `management.server.port=8081`
