@@ -10,3 +10,17 @@ GET localhost:8080/actuator/health
 ### healch check custom
 GET localhost:8080/actuator/health/custom
 StatusAggregator.java
+
+### Shows the configuration of loggers in the application.
+GET http://localhost:8080/actuator/loggers
+
+### Shows the configuration of loggers in the speicific package
+GET http://localhost:8080/actuator/loggers/io.iamkyu
+
+### dynamic logging level change
+POST http://localhost:8080/actuator/loggers/io.iamkyu
+Content-Type: application/json
+
+{
+  "configuredLevel": "DEBUG"
+}
