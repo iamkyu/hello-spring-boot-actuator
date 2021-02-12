@@ -7,8 +7,14 @@
 - [Spring Boot 1.X](https://docs.spring.io/spring-boot/docs/1.5.x/reference/html/production-ready-endpoints.html) 에서는 기본으로 노출 되어 있는 엔드포인트가 꽤 많음
 - [Spring Boot 2.X](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-endpoints-exposing-endpoints) 부터는 두 개의 엔드포인트만 기본 노출되도록 변경 (`/actuator/info`, `/actuator/health`)
 
+### 1. 포트변경
+> `management.server.port=8081`
 
-### 1. 헬스체크
+- 액추에이터는 기본적으로 애플리케이션 포트로 요청을 받지만 위와 같은 설정을 통해 별도의 포트를 사용 가능
+- 애플리케이션의 웹 API 와, 액추에이터와 관련된 웹 API 에 대해 다른 방화벽 설정을 해야 할 때 유용할 듯 
+
+
+### 2. 헬스체크
 > [2.8. Health Information](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html#production-ready-health)
 
 - actuator 를 통해 헬스체크 엔드포인트 노출시 주의가 필요.
@@ -91,8 +97,8 @@
 ```
 
 
-### 2. 로깅
-- `management.endpoints.web.exposure.include=loggers`
+### 3. 로깅 
+> `management.endpoints.web.exposure.include=loggers`
 
 액추에이터를 통해 동적으로 로깅 레벨을 변경하는 것도 가능. 프로퍼티에 위 값을 추가하면 `/actuator/loggers` 엔드포인트가 노출 됨.
 - GET 요청시 애플리케이션의 전체 패키지별 로깅 레벨 설정을 확인 가능. URL 패스에 특정 패키지를 명시하면 해당 패키지를 확인가능 (i.e, `/actuator/loggers/io.iamkyu`)

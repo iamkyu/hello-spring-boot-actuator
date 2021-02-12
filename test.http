@@ -2,23 +2,22 @@
 GET localhost:8080/hello
 
 ### info
-GET localhost:8080/actuator/info
+GET localhost:8081/actuator/info
 
 ### healch check
-GET localhost:8080/actuator/health
+GET localhost:8081/actuator/health
 
 ### healch check custom
-GET localhost:8080/actuator/health/custom
-StatusAggregator.java
+GET localhost:8081/actuator/health/custom
 
 ### Shows the configuration of loggers in the application.
-GET http://localhost:8080/actuator/loggers
+GET http://localhost:8081/actuator/loggers
 
 ### Shows the configuration of loggers in the speicific package
-GET http://localhost:8080/actuator/loggers/io.iamkyu
+GET http://localhost:8081/actuator/loggers/io.iamkyu
 
 ### dynamic logging level change
-POST http://localhost:8080/actuator/loggers/io.iamkyu
+POST http://localhost:8081/actuator/loggers/io.iamkyu
 Content-Type: application/json
 
 {
